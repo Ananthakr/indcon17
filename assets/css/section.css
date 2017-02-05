@@ -21,7 +21,7 @@
 	color: #313131;
 }
 .navbar-default .navbar-nav>li>a{
-	color: #313131;
+	color: white;
 }
 .navbar-default .navbar-nav>li>a:hover{
 	border: 1px solid rgba(49, 49, 49, 0.6);
