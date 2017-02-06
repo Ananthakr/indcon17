@@ -86,7 +86,7 @@ body
 	border-color: #313131;
 }
 .navbar-default {
-    background-color: grey;
+    background-color: #212121;
     border-color: transparent;
     padding-top: 50px;
 }
@@ -388,20 +388,26 @@ a .rss:hover{
 ==================================================*/
 /*Testimonial*/
 .testimonial{
-	background: url('../images/ceg.jpg');
+	background: url('../images/1.png');
+	    background-size: 100%;
 	color: #fff;
 }
 .testimonial .section-title{
-	color: #fff;
+	color: #000;
 }
 .testimonial-detail{
 	font-style: italic;
-	font-size: 15px;
+	font-size: 22px;
 	font-weight: 200;
+	color:black;
+	font-weight: bold;
 	margin-bottom: 50px;
 }
 .test-name {
     margin-bottom: 40px;
+}
+.test-name.h2{
+	color:black;
 }
 /*Owl carousel*/
 .owl-theme .owl-controls .owl-nav [class*=owl-]{
