@@ -50,13 +50,13 @@
 .side-left {
 	left: 0;
 	background: #ffffff;
-	color: #47a3da;
+	color: #212121;
 	outline: 1px solid #ffffff; /* avoid gap */
 }
 
 .side-right {
 	right: 0;
-	background: #34495e;
+	background: #212121;
 	color: #ffffff;
 	outline: 1px solid #34495e; /* avoid gap */
 }
@@ -183,7 +183,7 @@
 	left: 25%;
 	outline: 5px solid #ecf0f1; /* avoid rounding gaps */
 	background: #ecf0f1;
-	color: #97a8b2;
+	color: #000;
 	-webkit-transform: translateX(100%);
 	transform: translateX(100%);
 }

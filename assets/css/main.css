@@ -10,6 +10,12 @@ body
 	overflow-x: hidden;
 	color: #313131;
 }
+
+
+.right{
+	float:right;
+	margin-left:10px;
+}
 .black{
 	color: #313131;
 }
@@ -132,7 +138,7 @@ body
 }
 .header-table{
 	display: table;
-	height: 70vh;
+	height: 50vh;
 	width: 100%;
 }
 .header-title{
@@ -388,12 +394,11 @@ a .rss:hover{
 ==================================================*/
 /*Testimonial*/
 .testimonial{
-	background: url('../images/home.png') no-repeat;
 	    background-size: 100%;
-	color: #fff;
+	color: black;
 }
 .head{
-	color: white;
+	color: black;
 	font-weight: bold;
 }
 
