@@ -16,10 +16,7 @@ body
 }
 
 
-.text-center p{
 
-text-transform: lowercase;
-}
 .right{
 	float:right;
 	margin-left:40px;
@@ -28,7 +25,7 @@ text-transform: lowercase;
 	color: #313131;
 }
 .white{
-	background: #fff ;
+	background: #000 ;
 }
 .purple{
 	background: #4a148c;
@@ -74,7 +71,6 @@ text-transform: lowercase;
 	background-attachment: fixed;
 	height: 100vh;
 	color: #fff;
-	text-transform: uppercase;
 
 }
 			/*navbar*/

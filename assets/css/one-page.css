@@ -6,11 +6,10 @@
 	background-attachment: fixed;
 	height: 100vh;
 	color: #000;
-	text-transform: uppercase;
 }
 
 .logo{
-	max-width: 500px;
+	max-width: 650px;
 	margin-top: 0px;
 }
 .foot a{
