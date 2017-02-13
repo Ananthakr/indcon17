@@ -11,7 +11,15 @@ body
 	color: #313131;
 }
 
+.text-center .tit{
+	text-transform: uppercase;
+}
 
+
+.text-center p{
+
+text-transform: lowercase;
+}
 .right{
 	float:right;
 	margin-left:40px;
