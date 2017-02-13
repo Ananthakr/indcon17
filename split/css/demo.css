@@ -204,3 +204,12 @@ a:hover {
 @media screen and (max-height: 30.25em) {
 	.codropsheader nav { display: none; }
 }
+
+.foot a i{
+	font-size: 20px!important;
+	color:#3b5998!important;
+}
+.foot a{
+	font-size: 20px!important;
+	color:#3b5998!important;
+}
