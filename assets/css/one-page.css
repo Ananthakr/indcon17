@@ -9,11 +9,29 @@
 }
 
 .logo{
-	max-width: 650px;
-	margin-top: 0px;
+	max-width: 30%;
 }
 .foot a{
 	    text-transform: lowercase;
 	    color:black;
 	    padding-left:20px;
+}
+.lgo{
+		display:none;
+	}
+
+@media screen and (max-width: 600px){
+	.logo{
+		width:90%;
+	}
+	.logo{
+		margin:0;
+	}
+	.lgo{
+		display:block;
+		float:left;
+	}
+	.lgoh{
+		display: none;
+	}
 }

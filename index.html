@@ -6,7 +6,6 @@
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
 	<head>
-		<!-- meta -->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -29,6 +28,9 @@
 		<link rel="stylesheet" type="text/css" href="grid/css/demo.css" />
 		<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
 
+			<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+
 
 	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
@@ -41,13 +43,72 @@
 		    <![endif]-->
 	</head>
 	<style>
+
+
+	#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#boxes #dialog {
+  width: 750px;
+  height: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+}
+
+#boxes #dialog h1{
+	color:green;
+	font-weight: bold;
+}
+
+#boxes #dialog h4{
+	text-align: left;
+	color:;
+	font-weight: bold;
+}
+
+#popupfoot {
+  font-size: 16pt;
+  position: absolute;
+  bottom: 0px;
+  width: 250px;
+  left: 250px;
+}
+#popupfoot a{
+	color:black;
+	font-weight: bold;
+	opacity: 1;
+}
 	body{
 		background-color: #f2f2f2;
 	}
 
+
 		.testimonial img{
 		margin:10px;
 	}
+
+
 		.sidenav {
     height: 100%;
     width: 0;
@@ -61,6 +122,7 @@
     padding-top: 60px;
 }
 
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -69,6 +131,7 @@
     display: block;
     transition: 0.3s
 }
+
 
 .sidenav .h3,.sidenav .p{
 	color:white;
@@ -108,14 +171,115 @@
 
 	.titl{
 		font-family: 'Caveat Brush', cursive;
-		font-size: 70px;
+		font-size: 30px;
 	}
+
+	@media screen and (max-width:600px){
+		.update{
+			width:100%;
+			position:relative;
+		}
+		.titl{
+			font-size:20px;
+		}
+	}
+
+	}
+
+
+
+	* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 	</style>
 
 <body>
 
+
+<div id="boxes">
+
+  <div id="dialog" class="window">
+  <h1>Updates</h1>
+  
+    <h4 class="h3">Paper presentation:</h4>
+	<p class="p">Send your abstracts to <u>indcon2k17@gmail.com </u></p>
+	<p>Last date for submission has been extended to FEB 26.</p>
+
+    <div id="popupfoot"> <a href="#" class="close agree">OK</a> </div>
+
+  </div>
+
+  <div id="mask"></div>
+
+</div>
+
 <!-- Home -->
-	<section class="header" id="header">
+	<section class="portfolio-header" id="header">
 		
 		<nav class="navbar navbar-default" style="filter: brightness(1);">
 			<div class="container">
@@ -128,6 +292,8 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="" href="index.html"><img src="assets/images/logo.png" width="60px" height="60px"></a>
+					<a  href=""><img class="lgo" src="indlogo.png" width="60px" height="60px"></a>
+					<a  href=""><img class="lgo" src="ceglogo.png" width="60px" height="auto"></a>
 				</div> <!-- /.navbar-header -->
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -136,16 +302,17 @@
 						<li class="active"><a href="index.html">HOME</a></li>
 						<li><a href="#about">ABOUT US</a></li>
 						<li><a href="events.html">EVENTS</a></li>
-						<li><a href="sponsers.html">BECOME A SPONSOR</a></li>
+						<li><a href="sponsers.html">OUR SPONSORS</a></li>
 						<li><a href="team.html">OUR TEAM</a></li>
 						<li><a href="contact.html">CONTACT</a></li>
-					<a class="right" href=""><img src="indlogo.png" width="60px" height="60px"></a>
-					<a class="right" href=""><img src="ceglogo.png" width="60px" height="auto"></a>
+					<a class="right" href=""><img class="lgoh" src="indlogo.png" width="60px" height="60px"></a>
+					<a class="right" href=""><img class="lgoh" src="ceglogo.png" width="60px" height="auto"></a>
 
 					</ul> <!-- /.nav -->
 			    </div><!-- /.navbar-collapse -->
 		  	</div><!-- /.container -->
 		</nav>
+			</section> <!-- /#header -->
 		<!--<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <h3 class="h3">Paper Presentation:</h3>
@@ -154,13 +321,14 @@
 
 <div id="main"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Notification</span></div>-->
 
-<div class="update">
+<!--div class="update">
 <div style="padding:10px;">
 	<h3 class="text-center"><u>Updates</u></h3>
 	<h4 class="h3">Paper presentation:</h4>
-	<p class="p">Send your abstracts to <u>indcon2k17@gmail.com </u>latest by <span class="caps">FEB 24.</span></p>
+	<p class="p">Send your abstracts to <u>indcon2k17@gmail.com </u></p>
+	<p>Last date for submission has been extended to FEB 26.</p>
 	</div>
-</div>
+</div-->
 
 		<div class="container">
 			<div class="header-table">
@@ -170,6 +338,27 @@
 				</div> <!-- /.header-wrapper -->
 
 			</div>
+
+
+
+
+
+
+				<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+		<li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_0"/></li>
+		<li><img src="data1/images/1.jpg" alt="1" title="1" id="wows1_1"/></li>
+		<li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_2"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="3"><span><img src="data1/tooltips/3.jpg" alt="3"/>1</span></a>
+		<a href="#" title="1"><span><img src="data1/tooltips/1.jpg" alt="1"/>2</span></a>
+		<a href="#" title="2"><span><img src="data1/tooltips/2.jpg" alt="2"/>3</span></a>
+	</div></div>
+	<div class="ws_shadow"></div>
+	</div>	
+
+<br><br>
 			<div class="text-left">
 				<p><b class="tit">INDCON</b> is a national level symposium that is one of a kind in incorporating both management and technical aspects within its events. This is a two-day festival that witnesses the confluence of the greatest minds from across various engineering disciplines, and provides an ideal platform for them to network and interact.
 				This year we will be proudly celebrating the 25th Silver Jubilee Edition of Indcon, and we hope to make it the most extravagant edition yet. The annual occurrence of this symposium celebrates the department’s close association to its esteemed alumni and industrial network. With connections from all over the world, the Industrial Engineering department at Anna University is one of the most reputed in the nation.
@@ -234,5 +423,61 @@ function closeNav() {
     document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+
+	<script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+	<!-- // <script src="assets/js/smoothscroll.js"></script> -->
+	<script src="assets/js/script.js"></script>
+
+	    <script type="text/javascript">
+      $(document).ready(function() {  
+
+var id = '#dialog';
+  
+//Get the screen height and width
+var maskHeight = $(document).height();
+var maskWidth = $(window).width();
+  
+//Set heigth and width to mask to fill up the whole screen
+$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+//transition effect
+$('#mask').fadeIn(500); 
+$('#mask').fadeTo("slow",0.9);  
+  
+//Get the window height and width
+var winH = $(window).height();
+var winW = $(window).width();
+              
+//Set the popup window to center
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+  
+//transition effect
+$(id).fadeIn(2000);   
+  
+//if close button is clicked
+$('.window .close').click(function (e) {
+//Cancel the link behavior
+e.preventDefault();
+
+$('#mask').hide();
+$('.window').hide();
+});
+
+//if mask is clicked
+$('#mask').click(function () {
+$(this).hide();
+$('.window').hide();
+});
+  
+});
+    </script>
+
+
+    	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
 </body>
 </html>
